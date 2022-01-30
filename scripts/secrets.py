@@ -1,7 +1,7 @@
 # Use this code snippet in your app.
 # If you need more information about configurations or implementing the sample code, visit the AWS docs:   
 # https://aws.amazon.com/developers/getting-started/python/
-#ackowledgements => https://github.com/endre-synnes/python_aws_course/tree/main/lambda_intro/04_secrets_and_databases_and_stuff
+
 
 import boto3
 import base64

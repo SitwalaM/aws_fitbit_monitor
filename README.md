@@ -16,3 +16,5 @@ Simple application that monitors my daily heart and sleep data using fitbit API.
 [Inspired by guide here](https://qiita.com/bmj0114/items/620cd32eb599f1b26ea5)
 
 [Amazing guidance on all AWS services (YouTube)](https://www.youtube.com/channel/UCraiFqWi0qSIxXxXN4IHFBQ)
+
+[How to use secrets manager with AWS lambda](https://github.com/endre-synnes/python_aws_course/tree/main/lambda_intro/04_secrets_and_databases_and_stuff)
