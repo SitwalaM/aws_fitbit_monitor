@@ -13,7 +13,7 @@ Simple application that monitors my daily heart and sleep data using fitbit API.
 
 ## Heart Data EDA
 ### Loading the data from an EC2 Instance
-The daily json files were loaded into an EC2 instance for analysis. To do this, make sure to set the IAM policy for the EC2 to be able to read from s3. The free tier EC2 was sufficient for this job.
+The daily json files were loaded into an EC2 instance for analysis. To do this, make sure to set the IAM policy for the EC2 to be able to read from s3. The free tier EC2 (2.micro) was sufficient for this job.
 ```Bash
 import json
 #import datetime
