@@ -12,6 +12,38 @@ Simple application that monitors my daily heart and sleep data using fitbit API.
 ![Fitbit Monitor Architecture](https://github.com/SitwalaM/aws_fitbit_monitor/blob/main/images/architecture.png)
 
 ## Heart Data EDA
+### Loading the data from an EC2 Instance
+The daily json files were loaded into an EC2 instance for analysis. To do this, make sure to set the IAM policy for the EC2 to be able to read from s3. The free tier EC2 was sufficient for this job.
+```Bash
+import json
+#import datetime
+#import requests
+#import numpy as np
+import boto3
+
+# aws services clients
+s3 = boto3.client("s3")
+s3_resource = boto3.resource('s3')
+bucket = "bucketfitbit"
+
+def get_s3_files_list():
+
+    my_bucket = s3_resource.Bucket(bucket)
+    files_in_bucket = []
+    files_in_bucket = [files_in_bucket.key for files_in_bucket in my_bucket.objects.all()]
+    
+    iterator = files_in_bucket 
+    for file in iterator:
+        if file[-4:] != "json":
+            files_in_bucket.remove(file) 
+    return files_in_bucket
+
+files = get_s3_files_list()
+
+for file in files:
+    s3.download_file(bucket,file, file)
+```
+
 The following graphs are obtained from the data collected from the s3 bucket.
 
 ![Heart Rate Distribution](https://github.com/SitwalaM/aws_fitbit_monitor/blob/main/images/heart_dist.png)
