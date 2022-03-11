@@ -16,9 +16,6 @@ Simple application that monitors my daily heart and sleep data using fitbit API.
 The daily json files were loaded into an EC2 instance for analysis. To do this, make sure to set the IAM policy for the EC2 to be able to read from s3. The free tier EC2 (t2.micro) was sufficient for this job.
 ```Bash
 import json
-#import datetime
-#import requests
-#import numpy as np
 import boto3
 
 # aws services clients
