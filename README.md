@@ -53,7 +53,7 @@ The following graphs are obtained from the data collected from the s3 bucket.
 
 ## Anomaly Detection using Isolation Forest
 
-[Isolation forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html) was used for anomaly detection. It's an unsupervised learning algorithm that uses tree splits to isolate outliers in a dataset. The key parameter to tune for this algorithm is the contamination, which represents the ration of anomalies in the sample. Here, the contamination was chosen to be 0.08 through observation of the results it produced. It basically sets a threshold for what is considered as abnormal. A good way to check if the contamination is too high is to inspect some anomalies that are within ranges of data points that are not flagged as anomalies.
+[Isolation forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html) was used for anomaly detection. It's an unsupervised learning algorithm that uses tree splits to isolate outliers in a dataset. The key parameter to tune for this algorithm is the contamination, which represents the ratio of anomalies in the sample. Here, the contamination was chosen to be 0.08 through observation of the results it produced. It basically sets a threshold for what is considered as abnormal. A good way to check if the contamination is too high is to inspect some anomalies that are within ranges of data points that are not flagged as anomalies.
 
 ```Bash
 # fit and predict using isolation forest
